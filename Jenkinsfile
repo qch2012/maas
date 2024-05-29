@@ -9,7 +9,7 @@ pipeline {
 
     stage('syntax check') {
       steps {
-        sh 'bash -n maas.sh'
+        sh 'for script in $(find . -name "*.sh"); do bash -n $script; done'
       }
     }
 
