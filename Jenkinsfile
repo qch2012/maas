@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('syntax check') {
+      steps {
+        sh 'bash -n maas.sh'
+      }
+    }
+
   }
 }
